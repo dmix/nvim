@@ -35,11 +35,13 @@ Plug 'junegunn/fzf.vim'
 
 " ===== Color theme ======
 
-Plug 'kristijanhusak/vim-hybrid-material'
+" Plug 'kristijanhusak/vim-hybrid-material'
+" Plug 'NSBrianWard/Glacier-Remixes', { 'rtp': 'vim'}
+" Plug 'mhartington/oceanic-next'
+Plug 'flazz/vim-colorschemes'
 Plug 'gorodinskiy/vim-coloresque'
-"Plug 'NSBrianWard/Glacier-Remixes', { 'rtp': 'vim'}
-Plug 'mhartington/oceanic-next'
-
+Plug 'lilydjwg/colorizer'
+Plug 'chriskempson/base16-vim'
 
 " ===== Navigation ======
 
@@ -184,14 +186,11 @@ set history=1000 " increase history from 20 default to 1000
 
 " Color scheme
 " ------------------------------------------
-" let g:hybrid_use_Xresources = 1
-" let g:enable_bold_font = 1
-" colorscheme hybrid_material
+"
 syntax enable
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-colorscheme OceanicNext
 set background=dark
-
+colorscheme base16-theme
 
 " Line widths
 " --------------------------------------------------------
