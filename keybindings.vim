@@ -82,7 +82,7 @@ nnoremap <leader>p :Unite -vertical -buffer-name=mru -start-insert file_mru<cr>
 nnoremap <leader>/ :Unite -no-split grep:.<cr>
 nnoremap <leader>y :Unite -no-split -buffer-name=yank    history/yank<cr>
 nnoremap <leader>e :Unite -no-split -buffer-name=buffer  buffer<cr>
-nnoremap <leader>d <Esc>:bd<cr>
+" nnoremap <leader>d <Esc>:bd<cr>
 nnoremap <leader>b <Esc>:bp<cr>
 nnoremap <leader>n <Esc>:bn<cr>
 " nnoremap <C-n> :Unite -vertical file_rec<CR>

@@ -22,6 +22,10 @@ call plug#begin('~/.config/nvim/plugged')
 " Plug 'alx741/vinfo'
 " Plug 'Valloric/YouCompleteMe'
 " Plug 'Mizuchi/vim-ranger' " File explorer using ranger
+" Plug 'kristijanhusak/vim-hybrid-material'
+" Plug 'NSBrianWard/Glacier-Remixes', { 'rtp': 'vim'}
+" Plug 'flazz/vim-colorschemes'
+" Plug 'chriskempson/base16-vim'
 
 " LEARNING
 " -----------------------------------------
@@ -35,13 +39,9 @@ Plug 'junegunn/fzf.vim'
 
 " ===== Color theme ======
 
-" Plug 'kristijanhusak/vim-hybrid-material'
-" Plug 'NSBrianWard/Glacier-Remixes', { 'rtp': 'vim'}
-" Plug 'mhartington/oceanic-next'
-Plug 'flazz/vim-colorschemes'
-Plug 'gorodinskiy/vim-coloresque'
+Plug 'dmix/oceanic-next'
+" Plug 'gorodinskiy/vim-coloresque'
 Plug 'lilydjwg/colorizer'
-Plug 'chriskempson/base16-vim'
 
 " ===== Navigation ======
 
@@ -52,9 +52,24 @@ Plug 'gabesoft/vim-ags' " Ag search
 Plug 'ap/vim-buftabline' " Buffers = tabs
 Plug 'vim-scripts/BufOnly.vim' " Delete all buffers
 
+" ===== Auto-complete / Text helpers =====
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'Shougo/deoplete.nvim',          { 'do': ':UpdateRemotePlugins' }
+Plug 'cohama/lexima.vim'
+Plug 'tomtom/tcomment_vim'
+Plug 'tomtom/tlib_vim'
+Plug 'MarcWeber/vim-addon-mw-utils'
+" Plug 'ajh17/VimCompletesMe'
+" Plug 'vim-scripts/L9'
+" Plug 'othree/vim-autocomplpop'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'othree/csscomplete.vim'
+Plug 'othree/html5.vim'
+" Plug 'othree/xml.vim'
 
 " ===== Tmux integration ======
-
 Plug 'edkolev/tmuxline.vim'
 Plug 'wellle/tmux-complete.vim'
 Plug 'tmux-plugins/vim-tmux'
@@ -65,11 +80,15 @@ Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'junegunn/goyo.vim'
 Plug 'amix/vim-zenroom2'
-Plug 'irrationalistic/vim-tasks'
+Plug 'dmix/vim-tasks'
+" Plug 'irrationalistic/vim-tasks'
 " TODO: look into: guns/vim-clojure-static,
 
 
 " ===== Programming Languages =====
+
+" ---> Idris
+Plug 'idris-hackers/idris-vim', {'for': ['idris', 'lidris']}
 
 " ---> Viml
 Plug 'othree/vim-syntax-enhanced', {'for': 'vim'}
@@ -77,15 +96,22 @@ Plug 'othree/vim-syntax-enhanced', {'for': 'vim'}
 " ---> Erlang
 Plug 'vim-erlang/vim-erlang-runtime', {'for': 'erlang'}
 Plug 'vim-erlang/vim-erlang-omnicomplete', {'for': 'erlang'}
-" Plug 'vim-erlang/vim-erlang-compiler', {'for': 'erlang'}
 Plug 'vim-erlang/erlang-motions.vim', {'for': 'erlang'}
 Plug 'vim-erlang/vim-dialyzer', {'for': 'erlang'}
 Plug 'vim-scripts/vim-erlang-skeleteons', {'for': 'erlang'}
 Plug 'kbj/vim-snipmate-erlang', {'for': 'erlang'}
 
+" ---> Ruby
+Plug 'tpope/vim-rails', {'for': 'ruby'}
+Plug 'tpope/vim-haml'
+Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
+
 " ---> Elixir
 Plug 'elixir-lang/vim-elixir',       {'for': ['elixir'] }
-Plug 'sanmiguel/helpex.vim',         {'for': ['elixir'] }
+Plug 'powerman/vim-plugin-AnsiEsc'
+Plug 'slashmili/alchemist.vim',      {'for': ['elixir'] }
+Plug 'lucidstack/hex.vim'
+" Plug 'sanmiguel/helpex.vim',         {'for': ['elixir'] }
 
 " ---> Go
 Plug 'fatih/vim-go',                 { 'for': ['go'] }
@@ -107,7 +133,7 @@ Plug 'othree/javascript-syntax.vim',             { 'for': ['javascript', 'json']
 Plug 'othree/jsdoc-syntax.vim',             { 'for': ['javascript', 'json'] }
 
 " ---> CSS / HTML
-Plug 'ap/vim-css-color',             { 'for': ['css', 'html'] }
+" Plug 'ap/vim-css-color',             { 'for': ['css', 'html'] }
 Plug 'hail2u/vim-css3-syntax',       { 'for': ['css', 'scss','sass'] }
 Plug 'Glench/Vim-Jinja2-Syntax',     { 'for': ['html'] }
 Plug 'cakebaker/scss-syntax.vim',    { 'for': ['scss', 'sass'] }
@@ -129,24 +155,6 @@ Plug 'guns/vim-sexp',                { 'for': ['clojure'] }
 Plug 'guns/vim-clojure-highlight',   { 'for': ['clojure'] }
 Plug 'tpope/vim-fireplace',          { 'for': ['clojure'] }
 
-" ===== Auto-complete / Text helpers =====
-Plug 'Shougo/neocomplete.vim'
-Plug 'Shougo/neosnippet.vim'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'Shougo/deoplete.nvim'
-Plug 'cohama/lexima.vim'
-Plug 'tomtom/tcomment_vim'
-Plug 'tomtom/tlib_vim'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'ajh17/VimCompletesMe'
-Plug 'vim-scripts/L9'
-Plug 'othree/vim-autocomplpop'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-Plug 'othree/csscomplete.vim'
-Plug 'othree/html5.vim'
-Plug 'othree/xml.vim'
-
 call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -160,19 +168,20 @@ call system('mkdir -p ~/.config/nvim/.undo')
 call system('mkdir -p ~/.config/nvim/.backup')
 call system('mkdir -p ~/.config/nvim/.swap')
 
-set undodir=~/.config/nvim/.undo//
+set undodir=~/.config/nvim/.undo/
+set undofile
 " set backupdir=~/.config/nvim/.backup//
-set directory=~/.config/nvim/.swap//
-set nobackup
+set directory=~/.config/nvim/.swap/
+" set nobackup
 set shortmess+=A " Stop annoying swap warning
 
 " Tabs
 " ----------------------------------------
 set expandtab " insert tabs rather than spaces for <Tab>
 set smarttab " tab respects 'tabstop', 'shiftwidth', and 'softtabstop' hello my ba
-set tabstop=4 " the visible width of tabs
-set softtabstop=4 " edit as if the tabs are 4 characters wide
-set shiftwidth=4 " number of spaces to use for indent and unindent
+set tabstop=2 " the visible width of tabs
+set softtabstop=2 " edit as if the tabs are 4 characters wide
+set shiftwidth=2 " number of spaces to use for indent and unindent
 set hidden
 
 " Clipboard
@@ -187,10 +196,24 @@ set history=1000 " increase history from 20 default to 1000
 " Color scheme
 " ------------------------------------------
 "
-syntax enable
+" syntax enable
+" let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+" set background=dark
+" colorscheme base16-theme
+
+" For Neovim 0.1.3 and 0.1.4
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-set background=dark
-colorscheme base16-theme
+
+" Or if you have Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" Theme
+syntax enable
+colorscheme OceanicNext
+
+let g:airline_theme='oceanicnext'
 
 " Line widths
 " --------------------------------------------------------
