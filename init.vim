@@ -84,6 +84,20 @@ Plug 'dmix/vim-tasks'
 " Plug 'irrationalistic/vim-tasks'
 " TODO: look into: guns/vim-clojure-static,
 
+" ===== Linux =====
+
+" Plug '', { 'for': [''] }
+
+" ---> ZSH
+Plug 'chrisbra/vim-zsh',             { 'for': ['zsh'] }
+Plug 'rkitover/vimpager'
+
+" ---> Logs
+Plug 'thinca/vim-logcat',            { 'for': ['logcat'] }
+Plug 'dzeban/vim-log-syntax',        { 'for': ['log'] }
+Plug 'chr4/nginx.vim',               { 'for': ['nginx'] }
+
+
 
 " ===== Programming Languages =====
 
@@ -142,9 +156,6 @@ Plug 'groenewege/vim-less',          { 'for': ['less'] }
 " ---> Markdown
 Plug 'godlygeek/tabular',            { 'for': ['markdown', 'tasks'] }
 Plug 'plasticboy/vim-markdown',      { 'for': ['markdown', 'tasks'] }
-
-" ---> Android
-Plug 'naseer/logcat',                { 'for': ['logcat'] }
 
 " ---> Docker
 Plug 'ekalinin/Dockerfile.vim',      { 'for': ['docker', 'Dockerfile'] }
@@ -287,13 +298,17 @@ set mouse=a  " Mouse in all modes
 set ttimeoutlen=-1
 
 " Erlang
-" ---------------------.-------------------
-
+" ----------------------------------------
 let omnicompleteDir = expand('~/.config/nvim/plugged/vim-erlang-omnicomplete')
 let &runtimepath.=',~/.config/nvim'
 let &runtimepath.=',' . omnicompleteDir
 " let erlangCompilerDir = expand('~/.config/nvim/plugged/vim-erlang-compiler')
 " let &runtimepath.=',' . erlangCompilerDir
+
+" Python
+" ----------------------------------------
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
 
 " Source files
 " ------------------------------------------
