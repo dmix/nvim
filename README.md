@@ -1,4 +1,4 @@
-# dmix neovim config
+ dmix neovim config
 ---
 
 ### About
